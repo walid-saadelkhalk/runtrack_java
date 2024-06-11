@@ -1,0 +1,112 @@
+# Définir les variables
+JAVAC = javac
+JAVA = java
+SRC_DIRS = jour01 jour02
+OUT_DIR = out
+
+# Trouver tous les fichiers Java dans les sous-répertoires
+SRC_FILES = $(wildcard $(foreach dir, $(SRC_DIRS), $(dir)/*/*.java))
+
+# Règle par défaut
+all: compile
+
+# Compilation
+compile:
+	@mkdir -p $(OUT_DIR)
+	$(JAVAC) -d $(OUT_DIR) $(SRC_FILES)
+
+# Exécution des programmes pour jour01
+run1-job01:
+	$(JAVA) -cp $(OUT_DIR) jour01.job01.HelloWorld
+
+run1-job02:
+	$(JAVA) -cp $(OUT_DIR) jour01.job02.HelloWorld
+
+run1-job03:
+	$(JAVA) -cp $(OUT_DIR) jour01.job03.HelloWorld
+
+run1-job04:
+	$(JAVA) -cp $(OUT_DIR) jour01.job04.DeclarationVariable
+
+run1-job05:
+	$(JAVA) -cp $(OUT_DIR) jour01.job05.Calcul
+
+run1-job06:
+	$(JAVA) -cp $(OUT_DIR) jour01.job06.ExerciceVariable
+
+run1-job07:
+	$(JAVA) -cp $(OUT_DIR) jour01.job07.Addition
+
+run1-job08:
+	$(JAVA) -cp $(OUT_DIR) jour01.job08.Facture
+
+run1-job09:
+	$(JAVA) -cp $(OUT_DIR) jour01.job09.MyString
+
+run1-job10:
+	$(JAVA) -cp $(OUT_DIR) jour01.job10.UserName
+
+run1-job11:
+	$(JAVA) -cp $(OUT_DIR) jour01.job11.ConvertHour
+
+run1-job12:
+	$(JAVA) -cp $(OUT_DIR) jour01.job12.ChangeString
+
+run1-job13:
+	$(JAVA) -cp $(OUT_DIR) jour01.job13.ListNumber
+
+run1-job14:
+	$(JAVA) -cp $(OUT_DIR) jour01.job14.Somme
+
+
+# Exécution des programmes pour jour02
+run2-job01:
+	$(JAVA) -cp $(OUT_DIR) jour02.job01.Loop
+
+run2-job02:
+	$(JAVA) -cp $(OUT_DIR) jour02.job02.InverseLoop
+
+run2-job03:
+	$(JAVA) -cp $(OUT_DIR) jour02.job03.TimesTable
+
+run2-job04:
+	$(JAVA) -cp $(OUT_DIR) jour02.job04.ChiffresPairs
+
+run2-job05:
+	$(JAVA) -cp $(OUT_DIR) jour02.job05.LegalAge
+
+run2-job06:
+	$(JAVA) -cp $(OUT_DIR) jour02.job06.CalculPair
+
+run2-job07:
+	$(JAVA) -cp $(OUT_DIR) jour02.job07.Factorielle
+
+run2-job08:
+	$(JAVA) -cp $(OUT_DIR) jour02.job08.CompteChiffre
+
+run2-job09:
+	$(JAVA) -cp $(OUT_DIR) jour02.job09.ReceiveFirstLastNum
+
+run2-job10:
+	$(JAVA) -cp $(OUT_DIR) jour02.job10.AddNumber
+
+run2-job11:
+	$(JAVA) -cp $(OUT_DIR) jour02.job11.BuildTriangle
+
+run2-job12:
+	$(JAVA) -cp $(OUT_DIR) jour02.job12.TouteCombinaison
+
+# Nettoyage
+clean:
+	rm -rf $(OUT_DIR)
+
+# Règle pour afficher l'aide
+help:
+	@echo "Utilisation :"
+	@echo "  make          - Compile tous les fichiers Java"
+	@echo "  make run1-jobXX - Exécute le programme du jobXX de jour01 (exemple: make run1-job01)"
+	@echo "  make run2-jobXX - Exécute le programme du jobXX de jour02 (exemple: make run2-job01)"
+	@echo "  make clean    - Supprime les fichiers compilés"
+	@echo "  make help     - Affiche cette aide"
+
+.PHONY: all compile clean help

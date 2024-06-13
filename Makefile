@@ -128,6 +128,10 @@ run4-job01:
 
 run4-job02:
 	$(JAVA) -cp $(OUT_DIR) jour04.job02.ThreadProject
+
+run4-job03:
+	$(JAVA) -cp $(OUT_DIR) jour04.job03.ThreadProject
+
 # Nettoyage
 clean:
 	rm -rf $(OUT_DIR)

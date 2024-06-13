@@ -1,7 +1,7 @@
 # Définir les variables
 JAVAC = javac
 JAVA = java
-SRC_DIRS = jour01 jour02 jour03
+SRC_DIRS = jour01 jour02 jour03 jour04
 OUT_DIR = out
 
 # Trouver tous les fichiers Java dans les sous-répertoires
@@ -122,7 +122,12 @@ run3-job07:
 run3-job08:
 	$(JAVA) -cp $(OUT_DIR) jour03.job08.TriMatrice
 
-	
+# Exécution des programmes pour jour04
+run4-job01:
+	$(JAVA) -cp $(OUT_DIR) jour04.job01.ThreadProject
+
+run4-job02:
+	$(JAVA) -cp $(OUT_DIR) jour04.job02.ThreadProject
 # Nettoyage
 clean:
 	rm -rf $(OUT_DIR)

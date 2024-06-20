@@ -1,7 +1,7 @@
 # Définir les variables
 JAVAC = javac
 JAVA = java
-SRC_DIRS = jour01 jour02 jour03 jour04
+SRC_DIRS = jour01 jour02 jour03 jour04 jour05
 OUT_DIR = out
 
 # Trouver tous les fichiers Java dans les sous-répertoires
@@ -146,6 +146,32 @@ run4-job07:
 
 run4-job08:
 	$(JAVA) -cp $(OUT_DIR) jour04.job08.ThreadProject
+
+# Exécution des programmes pour jour05
+run5-job02:
+	$(JAVA) -cp $(OUT_DIR) jour05.job02.SimpleWindow
+
+run5-job03:
+	$(JAVA) -cp $(OUT_DIR) jour05.job03.UserInputButton
+
+run5-job04:
+	$(JAVA) -cp $(OUT_DIR) jour05.job04.PersonalizeWindow
+
+run5-job05:
+	$(JAVA) -cp $(OUT_DIR) jour05.job05.SendText
+
+run5-job06:
+	$(JAVA) -cp $(OUT_DIR) jour05.job06.ListChoice
+
+run5-job07:
+	$(JAVA) -cp $(OUT_DIR) jour05.job07.ArrayData
+
+run5-job08:
+	$(JAVA) -cp $(OUT_DIR) jour05.job08.Panel
+
+run5-job09:
+	$(JAVA) -cp $(OUT_DIR) jour05.job09.DialBox
+
 # Nettoyage
 clean:
 	rm -rf $(OUT_DIR)

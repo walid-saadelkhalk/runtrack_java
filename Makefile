@@ -200,7 +200,7 @@ run6-job08:
 	$(JAVA) -cp $(OUT_DIR) jour06.job08.AddHundred
 
 run6-job09:
-	$(JAVA) -cp $(OUT_DIR) jour06.job09.AddNumber
+	$(JAVA) -cp $(OUT_DIR) jour06.job09.AddCube
 
 run6-job10:
 	$(JAVA) -cp $(OUT_DIR) jour06.job10.Majority

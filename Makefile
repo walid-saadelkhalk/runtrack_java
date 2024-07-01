@@ -1,7 +1,7 @@
 # Définir les variables
 JAVAC = javac
 JAVA = java
-SRC_DIRS = jour01 jour02 jour03 jour04 jour05
+SRC_DIRS = jour01 jour02 jour03 jour04 jour05 jour06
 OUT_DIR = out
 
 # Trouver tous les fichiers Java dans les sous-répertoires
@@ -171,6 +171,54 @@ run5-job08:
 
 run5-job09:
 	$(JAVA) -cp $(OUT_DIR) jour05.job09.DialBox
+
+run6-job00:
+	$(JAVA) -cp $(OUT_DIR) jour06.job00.Main
+
+run6-job01:
+	$(JAVA) -cp $(OUT_DIR) jour06.job01.AfficherSaisie
+
+run6-job02:
+	$(JAVA) -cp $(OUT_DIR) jour06.job02.EcrirePrenom
+
+run6-job03:
+	$(JAVA) -cp $(OUT_DIR) jour06.job03.Array
+
+run6-job04:
+	$(JAVA) -cp $(OUT_DIR) jour06.job04.Welcome
+
+run6-job05:
+	$(JAVA) -cp $(OUT_DIR) jour06.job05.Square
+
+run6-job06:
+	$(JAVA) -cp $(OUT_DIR) jour06.job06.MaxNumber
+
+run6-job07:
+	$(JAVA) -cp $(OUT_DIR) jour06.job07.Moyenne
+
+run6-job08:
+	$(JAVA) -cp $(OUT_DIR) jour06.job08.AddHundred
+
+run6-job09:
+	$(JAVA) -cp $(OUT_DIR) jour06.job09.AddNumber
+
+run6-job10:
+	$(JAVA) -cp $(OUT_DIR) jour06.job10.Majority
+
+run6-job11:
+	$(JAVA) -cp $(OUT_DIR) jour06.job11.Factorielle
+
+run6-job12:
+	$(JAVA) -cp $(OUT_DIR) jour06.job12.FactorielleTwo
+
+run6-job13:
+	$(JAVA) -cp $(OUT_DIR) jour06.job13.NombrePair
+
+run6-job14:
+	$(JAVA) -cp $(OUT_DIR) jour06.job14.Times
+
+run6-job15:
+	$(JAVA) -cp $(OUT_DIR) jour06.job15.Inverse
 
 # Nettoyage
 clean:

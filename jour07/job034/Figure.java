@@ -1,4 +1,4 @@
-package jour07.job34;
+package jour07.job034;
 
 public class Figure {
     protected double x = 15.0d;

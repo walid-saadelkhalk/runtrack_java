@@ -235,7 +235,7 @@ run7-job03:
 	$(JAVA) -cp $(OUT_DIR) jour07.job03.FiguresGeometriques
 
 run7-job3.4:
-	$(JAVA) -cp $(OUT_DIR) jour07.job34.Figure
+	$(JAVA) -cp $(OUT_DIR) jour07.job034.Figure
 
 # Nettoyage
 clean:

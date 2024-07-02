@@ -1,4 +1,4 @@
-package jour07.job34;
+package jour07.job034;
 
 public class RectangleColore extends Rectangle{
     protected int couleur = 0;

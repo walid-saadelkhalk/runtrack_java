@@ -24,7 +24,7 @@ public class Cercle extends Figure{
     
     void afficher(){
         System.out.println("\nCercle:");
-        System.out.println("Centre du cercle: (" + x + ", " + y + ")");
+        super.afficher();
         System.out.println("Rayon: " + rayon + " cm");
         System.out.println("Surface: " + surface() + " cm²");
 

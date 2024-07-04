@@ -237,6 +237,12 @@ run7-job03:
 run7-job3.4:
 	$(JAVA) -cp $(OUT_DIR) jour07.job034.Figure
 
+run7-job04:
+	$(JAVA) -cp $(OUT_DIR) jour07.job04.GestionVehicules
+
+run7-job05:
+	$(JAVA) -cp $(OUT_DIR) jour07.job05.ABCDEF
+
 # Nettoyage
 clean:
 	rm -rf $(OUT_DIR)

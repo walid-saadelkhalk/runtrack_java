@@ -1,7 +1,8 @@
 # Définir les variables
 JAVAC = javac
 JAVA = java
-SRC_DIRS = jour01 jour02 jour03 jour04 jour05 jour06 jour07
+SRC_DIRS = jour01 jour02 jour03 jour04 jour05 jour06 jour07 jour08
+OUT_DIR = out
 
 # Trouver tous les fichiers Java dans les sous-répertoires
 SRC_FILES = $(wildcard $(foreach dir, $(SRC_DIRS), $(dir)/*/*.java))
@@ -11,237 +12,246 @@ all: compile
 
 # Compilation
 compile:
-	$(JAVAC) $(SRC_FILES)
+	@echo "Création du répertoire de sortie : $(OUT_DIR)"
+	@mkdir -p $(OUT_DIR)
+	@echo "Compilation des fichiers source..."
+	$(JAVAC) -d $(OUT_DIR) $(SRC_FILES)
+	@echo "Compilation terminée."
 
 # Exécution des programmes pour jour01
 run1-job01:
-	$(JAVA) jour01.job01.HelloWorld
+	$(JAVA) -cp $(OUT_DIR) jour01.job01.HelloWorld
 
 run1-job02:
-	$(JAVA) jour01.job02.HelloWorld
+	$(JAVA) -cp $(OUT_DIR) jour01.job02.HelloWorld
 
 run1-job03:
-	$(JAVA) jour01.job03.HelloWorld
+	$(JAVA) -cp $(OUT_DIR) jour01.job03.HelloWorld
 
 run1-job04:
-	$(JAVA) jour01.job04.DeclarationVariable
+	$(JAVA) -cp $(OUT_DIR) jour01.job04.DeclarationVariable
 
 run1-job05:
-	$(JAVA) jour01.job05.Calcul
+	$(JAVA) -cp $(OUT_DIR) jour01.job05.Calcul
 
 run1-job06:
-	$(JAVA) jour01.job06.ExerciceVariable
+	$(JAVA) -cp $(OUT_DIR) jour01.job06.ExerciceVariable
 
 run1-job07:
-	$(JAVA) jour01.job07.Addition
+	$(JAVA) -cp $(OUT_DIR) jour01.job07.Addition
 
 run1-job08:
-	$(JAVA) jour01.job08.Facture
+	$(JAVA) -cp $(OUT_DIR) jour01.job08.Facture
 
 run1-job09:
-	$(JAVA) jour01.job09.MyString
+	$(JAVA) -cp $(OUT_DIR) jour01.job09.MyString
 
 run1-job10:
-	$(JAVA) jour01.job10.UserName
+	$(JAVA) -cp $(OUT_DIR) jour01.job10.UserName
 
 run1-job11:
-	$(JAVA) jour01.job11.ConvertHour
+	$(JAVA) -cp $(OUT_DIR) jour01.job11.ConvertHour
 
 run1-job12:
-	$(JAVA) jour01.job12.ChangeString
+	$(JAVA) -cp $(OUT_DIR) jour01.job12.ChangeString
 
 run1-job13:
-	$(JAVA) jour01.job13.ListNumber
+	$(JAVA) -cp $(OUT_DIR) jour01.job13.ListNumber
 
 run1-job14:
-	$(JAVA) jour01.job14.Somme
+	$(JAVA) -cp $(OUT_DIR) jour01.job14.Somme
 
 # Exécution des programmes pour jour02
 run2-job01:
-	$(JAVA) jour02.job01.Loop
+	$(JAVA) -cp $(OUT_DIR) jour02.job01.Loop
 
 run2-job02:
-	$(JAVA) jour02.job02.InverseLoop
+	$(JAVA) -cp $(OUT_DIR) jour02.job02.InverseLoop
 
 run2-job03:
-	$(JAVA) jour02.job03.TimesTable
+	$(JAVA) -cp $(OUT_DIR) jour02.job03.TimesTable
 
 run2-job04:
-	$(JAVA) jour02.job04.ChiffresPairs
+	$(JAVA) -cp $(OUT_DIR) jour02.job04.ChiffresPairs
 
 run2-job05:
-	$(JAVA) jour02.job05.LegalAge
+	$(JAVA) -cp $(OUT_DIR) jour02.job05.LegalAge
 
 run2-job06:
-	$(JAVA) jour02.job06.CalculPair
+	$(JAVA) -cp $(OUT_DIR) jour02.job06.CalculPair
 
 run2-job07:
-	$(JAVA) jour02.job07.Factorielle
+	$(JAVA) -cp $(OUT_DIR) jour02.job07.Factorielle
 
 run2-job08:
-	$(JAVA) jour02.job08.CompteChiffre
+	$(JAVA) -cp $(OUT_DIR) jour02.job08.CompteChiffre
 
 run2-job09:
-	$(JAVA) jour02.job09.ReceiveFirstLastNum
+	$(JAVA) -cp $(OUT_DIR) jour02.job09.ReceiveFirstLastNum
 
 run2-job10:
-	$(JAVA) jour02.job10.AddNumber
+	$(JAVA) -cp $(OUT_DIR) jour02.job10.AddNumber
 
 run2-job11:
-	$(JAVA) jour02.job11.BuildTriangle
+	$(JAVA) -cp $(OUT_DIR) jour02.job11.BuildTriangle
 
 run2-job12:
-	$(JAVA) jour02.job12.TouteCombinaison
+	$(JAVA) -cp $(OUT_DIR) jour02.job12.TouteCombinaison
 
 # Exécution des programmes pour jour03
 run3-job01:
-	$(JAVA) jour03.job01.TableauStatic
+	$(JAVA) -cp $(OUT_DIR) jour03.job01.TableauStatic
 
 run3-job02:
-	$(JAVA) jour03.job02.MonTableau
+	$(JAVA) -cp $(OUT_DIR) jour03.job02.MonTableau
 
 run3-job03:
-	$(JAVA) jour03.job03.TableauString
+	$(JAVA) -cp $(OUT_DIR) jour03.job03.TableauString
 
 run3-job04:
-	$(JAVA) jour03.job04.TableauOccurence
+	$(JAVA) -cp $(OUT_DIR) jour03.job04.TableauOccurence
 
 run3-job05:
-	$(JAVA) jour03.job05.ValeurUnique
+	$(JAVA) -cp $(OUT_DIR) jour03.job05.ValeurUnique
 
 run3-job06:
-	$(JAVA) jour03.job06.NombresAleatoire
+	$(JAVA) -cp $(OUT_DIR) jour03.job06.NombresAleatoire
 
 run3-job07:
-	$(JAVA) jour03.job07.Matrice
+	$(JAVA) -cp $(OUT_DIR) jour03.job07.Matrice
 
 run3-job08:
-	$(JAVA) jour03.job08.TriMatrice
+	$(JAVA) -cp $(OUT_DIR) jour03.job08.TriMatrice
 
 # Exécution des programmes pour jour04
 run4-job01:
-	$(JAVA) jour04.job01.ThreadProject
+	$(JAVA) -cp $(OUT_DIR) jour04.job01.ThreadProject
 
 run4-job02:
-	$(JAVA) jour04.job02.ThreadProject
+	$(JAVA) -cp $(OUT_DIR) jour04.job02.ThreadProject
 
 run4-job03:
-	$(JAVA) jour04.job03.ThreadProject
+	$(JAVA) -cp $(OUT_DIR) jour04.job03.ThreadProject
 
 run4-job04:
-	$(JAVA) jour04.job04.ThreadProject
+	$(JAVA) -cp $(OUT_DIR) jour04.job04.ThreadProject
 
 run4-job05:
-	$(JAVA) jour04.job05.ThreadProject
+	$(JAVA) -cp $(OUT_DIR) jour04.job05.ThreadProject
 
 run4-job06:
-	$(JAVA) jour04.job06.ThreadProject
+	$(JAVA) -cp $(OUT_DIR) jour04.job06.ThreadProject
 
 run4-job07:
-	$(JAVA) jour04.job07.ThreadProject
+	$(JAVA) -cp $(OUT_DIR) jour04.job07.ThreadProject
 
 run4-job08:
-	$(JAVA) jour04.job08.ThreadProject
+	$(JAVA) -cp $(OUT_DIR) jour04.job08.ThreadProject
 
 # Exécution des programmes pour jour05
 run5-job02:
-	$(JAVA) jour05.job02.SimpleWindow
+	$(JAVA) -cp $(OUT_DIR) jour05.job02.SimpleWindow
 
 run5-job03:
-	$(JAVA) jour05.job03.UserInputButton
+	$(JAVA) -cp $(OUT_DIR) jour05.job03.UserInputButton
 
 run5-job04:
-	$(JAVA) jour05.job04.PersonalizeWindow
+	$(JAVA) -cp $(OUT_DIR) jour05.job04.PersonalizeWindow
 
 run5-job05:
-	$(JAVA) jour05.job05.SendText
+	$(JAVA) -cp $(OUT_DIR) jour05.job05.SendText
 
 run5-job06:
-	$(JAVA) jour05.job06.ListChoice
+	$(JAVA) -cp $(OUT_DIR) jour05.job06.ListChoice
 
 run5-job07:
-	$(JAVA) jour05.job07.ArrayData
+	$(JAVA) -cp $(OUT_DIR) jour05.job07.ArrayData
 
 run5-job08:
-	$(JAVA) jour05.job08.Panel
+	$(JAVA) -cp $(OUT_DIR) jour05.job08.Panel
 
 run5-job09:
-	$(JAVA) jour05.job09.DialBox
+	$(JAVA) -cp $(OUT_DIR) jour05.job09.DialBox
 
 # Exécution des programmes pour jour06
 run6-job00:
-	$(JAVA) jour06.job00.Main
+	$(JAVA) -cp $(OUT_DIR) jour06.job00.Main
 
 run6-job01:
-	$(JAVA) jour06.job01.AfficherSaisie
+	$(JAVA) -cp $(OUT_DIR) jour06.job01.AfficherSaisie
 
 run6-job02:
-	$(JAVA) jour06.job02.EcrirePrenom
+	$(JAVA) -cp $(OUT_DIR) jour06.job02.EcrirePrenom
 
 run6-job03:
-	$(JAVA) jour06.job03.Array
+	$(JAVA) -cp $(OUT_DIR) jour06.job03.Array
 
 run6-job04:
-	$(JAVA) jour06.job04.Welcome
+	$(JAVA) -cp $(OUT_DIR) jour06.job04.Welcome
 
 run6-job05:
-	$(JAVA) jour06.job05.Square
+	$(JAVA) -cp $(OUT_DIR) jour06.job05.Square
 
 run6-job06:
-	$(JAVA) jour06.job06.MaxNumber
+	$(JAVA) -cp $(OUT_DIR) jour06.job06.MaxNumber
 
 run6-job07:
-	$(JAVA) jour06.job07.Moyenne
+	$(JAVA) -cp $(OUT_DIR) jour06.job07.Moyenne
 
 run6-job08:
-	$(JAVA) jour06.job08.AddHundred
+	$(JAVA) -cp $(OUT_DIR) jour06.job08.AddHundred
 
 run6-job09:
-	$(JAVA) jour06.job09.AddCube
+	$(JAVA) -cp $(OUT_DIR) jour06.job09.AddCube
 
 run6-job10:
-	$(JAVA) jour06.job10.Majority
+	$(JAVA) -cp $(OUT_DIR) jour06.job10.Majority
 
 run6-job11:
-	$(JAVA) jour06.job11.Factorielle
+	$(JAVA) -cp $(OUT_DIR) jour06.job11.Factorielle
 
 run6-job12:
-	$(JAVA) jour06.job12.FactorielleTwo
+	$(JAVA) -cp $(OUT_DIR) jour06.job12.FactorielleTwo
 
 run6-job13:
-	$(JAVA) jour06.job13.NombrePair
+	$(JAVA) -cp $(OUT_DIR) jour06.job13.NombrePair
 
 run6-job14:
-	$(JAVA) jour06.job14.Times
+	$(JAVA) -cp $(OUT_DIR) jour06.job14.Times
 
 run6-job15:
-	$(JAVA) jour06.job15.Inverse
+	$(JAVA) -cp $(OUT_DIR) jour06.job15.Inverse
 
 # Exécution des programmes pour jour07
 run7-job00:
-	$(JAVA) jour07.job00.Main
+	$(JAVA) -cp $(OUT_DIR) jour07.job00.Main
 
 run7-job01:
-	$(JAVA) jour07.job01.Toto
+	$(JAVA) -cp $(OUT_DIR) jour07.job01.Toto
 
 run7-job02:
-	$(JAVA) jour07.job02.Erreur
+	$(JAVA) -cp $(OUT_DIR) jour07.job02.Erreur
 
 run7-job03:
-	$(JAVA) jour07.job03.FiguresGeometriques
+	$(JAVA) -cp $(OUT_DIR) jour07.job03.FiguresGeometriques
 
 run7-job3.4:
-	$(JAVA) jour07.job034.Figure
+	$(JAVA) -cp $(OUT_DIR) jour07.job034.Figure
 
 run7-job04:
-	$(JAVA) jour07.job04.GestionVehicules
+	$(JAVA) -cp $(OUT_DIR) jour07.job04.GestionVehicules
 
 run7-job05:
-	$(JAVA) jour07.job05.ABCDEF
+	$(JAVA) -cp $(OUT_DIR) jour07.job05.ABCDEF
+
+run8-job04:
+	$(JAVA) -cp $(OUT_DIR) jour08.job04.Main
 
 # Nettoyage
 clean:
-	find $(SRC_DIRS) -name "*.class" -type f -delete
+	@echo "Suppression des fichiers compilés dans : $(OUT_DIR)"
+	rm -rf $(OUT_DIR)/**/*.class
+	@echo "Nettoyage terminé."
 
 # Règle pour afficher l'aide
 help:
